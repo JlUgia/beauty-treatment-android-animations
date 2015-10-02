@@ -141,16 +141,6 @@ public class NoisySwipeRefreshLayout extends ViewGroup {
         @Override
         public void run() {
             mReturningToStart = true;
-            // Timeout fired since the user last moved their finger; animate the
-            // trigger to 0 and put the target back at its original position
-            /*if (mProgressBar != null) {
-                mFromPercentage = mCurrPercentage;
-                mShrinkTrigger.setDuration(mMediumAnimationDuration);
-                mShrinkTrigger.setAnimationListener(mShrinkAnimationListener);
-                mShrinkTrigger.reset();
-                mShrinkTrigger.setInterpolator(mDecelerateInterpolator);
-                startAnimation(mShrinkTrigger);
-            }*/
             animateOffsetToStartPosition(mCurrentTargetOffsetTop + getPaddingTop(),
                     mReturnToStartPositionListener);
         }

@@ -14,6 +14,8 @@ import android.widget.ImageView;
 import ugia.io.androidbeautytreatment.R;
 
 /**
+ * This class provides a straightforward way to add clipping and stroke to an #ImageView
+ * <p/>
  * Created by joseluisugia on 1/28/14.
  */
 public class ClippedImageView extends ImageView {
@@ -53,6 +55,7 @@ public class ClippedImageView extends ImageView {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH
                 && Build.VERSION.SDK_INT <= Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1) {
+
             setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         }
     }
