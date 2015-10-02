@@ -151,10 +151,10 @@ public class StaticHeaderListFragment extends Fragment implements ClickableViewC
         }
 
         private void bindContact(Contact contact) {
-            contactNameTextView.setText(contact.name);
-            contactNumberTextView.setText(contact.phoneNumber);
+            contactNameTextView.setText(contact.getName());
+            contactNumberTextView.setText(contact.getPhoneNumber());
 
-            int visibility = contact.hasRecentConversation ? View.VISIBLE : View.GONE;
+            int visibility = contact.hasRecentConversation() ? View.VISIBLE : View.GONE;
             activeConversationsView.setVisibility(visibility);
         }
     }

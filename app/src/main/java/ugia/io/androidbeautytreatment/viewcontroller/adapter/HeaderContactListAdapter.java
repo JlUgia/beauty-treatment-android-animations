@@ -1,34 +1,24 @@
 package ugia.io.androidbeautytreatment.viewcontroller.adapter;
 
-import java.util.Arrays;
-import java.util.Comparator;
-
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import ugia.io.androidbeautytreatment.R;
 import ugia.io.androidbeautytreatment.model.Contact;
 
 /**
+ * This class adds on top of @{ContactAdapter} and includes a header on top of the list
+ * <p/>
  * Created by joseluisugia on 16/07/15.
  */
-public class HeaderContactListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class HeaderContactListAdapter extends ContactAdapter {
 
-    private final static int VIEW_TYPE_HEADER = 0;
-    private final static int VIEW_TYPE_ROW = 1;
-
-    private final Contact[] contacts;
+    private final static int VIEW_TYPE_HEADER = 1;
 
     public HeaderContactListAdapter(Contact[] contacts) {
-        this.contacts = contacts;
-        sortContactArray();
-    }
-
-    private void sortContactArray() {
-        Arrays.sort(contacts, contactComparator);
+        super(contacts);
     }
 
     @Override
@@ -70,7 +60,7 @@ public class HeaderContactListAdapter extends RecyclerView.Adapter<RecyclerView.
 
     @Override
     public int getItemCount() {
-        return contacts.length + 1;
+        return super.getItemCount() + 1;
     }
 
     @Override
@@ -88,25 +78,4 @@ public class HeaderContactListAdapter extends RecyclerView.Adapter<RecyclerView.
             super(view);
         }
     }
-
-    class ContactViewHolder extends RecyclerView.ViewHolder {
-
-        private final TextView contactName;
-
-        public ContactViewHolder(View view) {
-            super(view);
-            contactName = (TextView) view.findViewById(R.id.il_textview);
-        }
-
-        private void bindContact(Contact contact) {
-            contactName.setText(contact.name);
-        }
-    }
-
-    private final Comparator<Contact> contactComparator = new Comparator<Contact>() {
-        @Override
-        public int compare(Contact lhs, Contact rhs) {
-            return lhs.name.compareTo(rhs.name);
-        }
-    };
 }
