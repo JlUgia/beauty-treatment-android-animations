@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:height="300dp"
+        android:width="172dp"
+        android:viewportHeight="300"
+        android:viewportWidth="172">
+
+    <group android:name="complete-branch">
+
+
+        <path
+                android:name="leave2"
+                android:fillColor="#9FAF28"
+                android:pathData="M84.1886409,31.9967522 C88.6335153,32.1713645 93.1518477,32.7220986
+97.5069888,33.4765469 C97.194682,24.1003985 90.8614508,15.4121164
+81.7847578,12.9816551 C75.7365617,11.3603186 61.7337778,10.380109
+61.0748544,9.92682265 C65.6274966,19.575472 69.1490863,29.5354251
+84.1899605,31.9967522 L84.1886409,31.9967522 Z"/>
+
+    </group>
+</vector>

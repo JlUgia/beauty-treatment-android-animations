@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:height="300dp"
+        android:width="172dp"
+        android:viewportHeight="300"
+        android:viewportWidth="172">
+
+    <group android:name="complete-branch">
+
+        <path
+                android:name="source"
+                android:fillColor="#9FAF28"
+                android:pathData="M 71.0481363 265.0146272 C 80.4423714332 265.0146272 88.0579037 272.648705355 88.0579037 282.065818 C 88.0579037 291.482930645 80.4423714332 299.1170088 71.0481363 299.1170088 C 61.6539011668 299.1170088 54.0383689 291.482930645 54.0383689 282.065818 C 54.0383689 272.648705355 61.6539011668 265.0146272 71.0481363 265.0146272 Z"/>
+
+
+    </group>
+</vector>

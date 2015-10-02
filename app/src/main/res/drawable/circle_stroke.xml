@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:height="@dimen/dynamic_header_list_user_avatar_size_big"
+        android:width="@dimen/dynamic_header_list_user_avatar_size_big"
+        android:viewportHeight="102"
+        android:viewportWidth="102">
+
+    <path
+            android:name="right-semi-circle"
+            android:strokeColor="@color/grey"
+            android:strokeWidth="2"
+            android:pathData="M51,1 C77.61,1 100,23.39 100,51 C100,78.61 77.61,101 50,101"/>
+
+    <path
+            android:name="left-semi-circle"
+            android:strokeColor="@color/grey"
+            android:strokeWidth="2"
+            android:pathData="M51,101 C23.39,101 1,78.61 1,51 C1,23.39 23.39,1 51,1"/>
+</vector>

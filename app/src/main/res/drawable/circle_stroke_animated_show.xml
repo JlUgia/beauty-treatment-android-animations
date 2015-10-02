@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:drawable="@drawable/circle_stroke">
+
+    <target
+            android:name="left-semi-circle"
+            android:animation="@animator/stroke_appear_from_center"/>
+
+    <target
+            android:name="right-semi-circle"
+            android:animation="@animator/stroke_appear_from_center"/>
+
+</animated-vector>

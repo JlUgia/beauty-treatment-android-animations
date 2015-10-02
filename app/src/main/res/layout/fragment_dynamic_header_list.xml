@@ -1,0 +1,61 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <FrameLayout
+            android:id="@+id/fdh_top_header"
+            android:layout_width="match_parent"
+            android:layout_height="125dp">
+
+        <View
+                android:id="@+id/fdh_top_header_background"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="100dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/shape_dark_circle"/>
+
+    </FrameLayout>
+
+    <View
+            android:id="@+id/fdh_top_header_divider_line"
+            android:layout_width="50dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="125dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/grey"/>
+
+    <FrameLayout
+            android:id="@+id/fdh_avatar_stroke_group"
+            android:layout_width="@dimen/dynamic_header_list_user_avatar_size_big"
+            android:layout_height="@dimen/dynamic_header_list_user_avatar_size_big"
+            android:layout_marginTop="75dp"
+            android:layout_gravity="center_horizontal">
+
+        <ugia.io.androidbeautytreatment.view.ClippedImageView
+                android:id="@+id/fdh_avatar_imageview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/avatar_placeholder"
+                app:cornerRadius="@dimen/dynamic_header_list_user_avatar_size_big"
+                app:backgroundStrokeColor="@color/white_86"
+                app:backgroundStrokeSize="2dp"/>
+
+        <ImageView
+                android:id="@+id/fdh_avatar_stroke_imageview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/fdh_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dynamic_header_height"
+            android:overScrollMode="never"
+            android:scrollbars="vertical"/>
+
+</FrameLayout>

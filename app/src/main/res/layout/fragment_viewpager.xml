@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/viewpager_header_height"
+            android:elevation="5dp"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+        <include android:id="@+id/fv_header_text_1"
+                 layout="@layout/view_viewpager_header_textview"/>
+
+        <include android:id="@+id/fv_header_text_2"
+                 layout="@layout/view_viewpager_header_textview"/>
+
+        <include android:id="@+id/fv_header_text_3"
+                 layout="@layout/view_viewpager_header_textview"/>
+
+        <include android:id="@+id/fv_header_text_4"
+                 layout="@layout/view_viewpager_header_textview"/>
+
+        <include android:id="@+id/fv_header_text_5"
+                 layout="@layout/view_viewpager_header_textview"/>
+
+    </FrameLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"/>
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+</LinearLayout>

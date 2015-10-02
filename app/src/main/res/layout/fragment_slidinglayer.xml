@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:slidingLayer="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity$PlaceholderFragment">
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:padding="10dp"
+            android:background="@android:color/holo_red_dark"
+            android:text="Do Not Push!"
+            android:onClick="buttonClicked"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:orientation="vertical"
+            android:elevation="10dp">
+
+        <com.wunderlist.slidinglayer.SlidingLayer
+                android:id="@+id/fs_slidinglayer_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                slidingLayer:stickTo="top"
+                slidingLayer:offsetDistance="50dp"
+                android:elevation="1dp"
+                slidingLayer:changeStateOnTap="true">
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    android:src="@drawable/speakers"/>
+
+        </com.wunderlist.slidinglayer.SlidingLayer>
+
+
+        <com.wunderlist.slidinglayer.SlidingLayer
+                android:id="@+id/fs_slidinglayer_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                slidingLayer:stickTo="bottom"
+                slidingLayer:offsetDistance="50dp"
+                slidingLayer:changeStateOnTap="true">
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    android:src="@drawable/speakers"/>
+
+        </com.wunderlist.slidinglayer.SlidingLayer>
+
+    </LinearLayout>
+
+    <com.wunderlist.slidinglayer.SlidingLayer
+            android:id="@+id/fs_slidinglayer_left"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            slidingLayer:stickTo="left"
+            android:elevation="10dp"
+            slidingLayer:offsetDistance="50dp"
+            slidingLayer:changeStateOnTap="true">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/speakers"/>
+
+    </com.wunderlist.slidinglayer.SlidingLayer>
+
+    <com.wunderlist.slidinglayer.SlidingLayer
+            android:id="@+id/fs_slidinglayer_right"
+            android:layout_width="100dp"
+            android:elevation="10dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            slidingLayer:stickTo="right"
+            slidingLayer:offsetDistance="50dp"
+            slidingLayer:changeStateOnTap="true">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/speakers" android:scaleType="centerCrop"/>
+
+    </com.wunderlist.slidinglayer.SlidingLayer>
+
+</RelativeLayout>

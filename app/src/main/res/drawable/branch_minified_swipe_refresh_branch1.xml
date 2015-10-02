@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:height="300dp"
+        android:width="172dp"
+        android:viewportHeight="300"
+        android:viewportWidth="172">
+
+    <group android:name="complete-branch">
+
+
+        <path
+                android:name="branch1"
+                android:strokeColor="#9FAF28"
+                android:strokeWidth="4"
+                android:strokeLineCap="round"
+                android:pathData="M84.7410425,147.426438 C76.68964,112.91674 36.2987187,121.299601
+51.533198,36.2961238"/>
+           
+
+    </group>
+</vector>

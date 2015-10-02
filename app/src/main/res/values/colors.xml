@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Shades of Grey -->
+    <color name="lighter_grey">#dadada</color>
+    <color name="light_grey">#c8c8c8</color>
+    <color name="grey">#808080</color>
+    <color name="medium_dark_grey">#666666</color>
+    <color name="dark_grey">#424242</color>
+    <color name="darker_grey">#242424</color>
+
+    <color name="transparent_light_black">#55000000</color>
+    <color name="transparent_black">#80000000</color>
+    <color name="transparent_dark_black">#bb000000</color>
+
+    <!-- Whites with Alpha -->
+    <color name="white_95">#e3ffffff</color>
+    <color name="white_86">#ddffffff</color>
+    <color name="white_80">#ccffffff</color>
+    <color name="white_66">#aaffffff</color>
+    <color name="white_60">#99ffffff</color>
+    <color name="white_40">#66ffffff</color>
+    <color name="white_20">#33ffffff</color>
+
+</resources>

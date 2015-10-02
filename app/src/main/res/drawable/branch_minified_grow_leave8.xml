@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:drawable="@drawable/branch_minified_swipe_refresh_leave8">
+
+    <target
+            android:name="leave8"
+            android:animation="@animator/stroke_appear_from_end"/>
+
+</animated-vector>

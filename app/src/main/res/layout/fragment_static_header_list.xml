@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <FrameLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/recyclerview_header_height"
+            android:elevation="5dp">
+
+        <include android:id="@+id/fv_header_1"
+                 layout="@layout/view_recyclerview_header"/>
+
+        <!--<include android:id="@+id/fv_header_text_2"
+                 layout="@layout/view_viewpager_header_textview"/>
+
+        <include android:id="@+id/fv_header_text_3"
+                 layout="@layout/view_viewpager_header_textview"/>
+
+        <include android:id="@+id/fv_header_text_4"
+                 layout="@layout/view_viewpager_header_textview"/>
+
+        <include android:id="@+id/fv_header_text_5"
+                 layout="@layout/view_viewpager_header_textview"/>-->
+
+    </FrameLayout>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <FrameLayout
+                android:id="@+id/fshl_swipe_refresh_container"
+                android:layout_width="@dimen/swipe_refresh_height"
+                android:layout_height="@dimen/swipe_refresh_height"
+                android:layout_gravity="center_horizontal"/>
+
+
+        <ugia.io.androidbeautytreatment.view.NoisySwipeRefreshLayout
+                android:id="@+id/fshl_swipe_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/fl_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"/>
+
+        </ugia.io.androidbeautytreatment.view.NoisySwipeRefreshLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- BackgroundShape -->
+    <declare-styleable name="BackgroundShape">
+        <attr name="backgroundStrokeColor" format="color"/>
+        <attr name="backgroundStrokeSize" format="dimension"/>
+    </declare-styleable>
+
+    <!-- ClippedImageView -->
+    <declare-styleable name="ClippedImageView">
+        <attr name="cornerRadius" format="dimension"/>
+    </declare-styleable>
+
+
+    <!-- SuperSwipeRefreshLayout -->
+    <declare-styleable name="SuperSwipeRefreshLayout">
+        <attr name="topOffset" format="dimension"/>
+        <attr name="progressBarHeight" format="dimension"/>
+    </declare-styleable>
+
+</resources>
