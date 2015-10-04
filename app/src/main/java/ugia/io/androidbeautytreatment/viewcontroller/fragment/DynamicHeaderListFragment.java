@@ -140,7 +140,7 @@ public class DynamicHeaderListFragment extends Fragment implements ClickableView
                 new Contact(0, "Ramiro de Maeztu", "999", true),
                 new Contact(0, "Ramón María del Valle-Inclán", "747", false),
                 new Contact(0, "Ángel Ganivet", "622", false),
-                new Contact(0, "Enrique de Mes", "278", true),
+                new Contact(0, "Enrique de Mesa", "278", true),
                 new Contact(0, "Azorín", "345", false)
         };
     }
