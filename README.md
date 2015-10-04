@@ -9,7 +9,7 @@ Screenshots
 ![Demo Screenshot 4][3]
 ![Demo Screenshot 3][4]
 
-[1]: ./assets/listviewpathexample.gif
+[1]: ./assets/swiperefresh.gif
 [2]: ./assets/slidinglayerparty.gif
-[3]: ./assets/swiperefresh.gif
+[3]: ./assets/listviewpathexample.gif
 [4]: ./assets/viewpagerslidejoy.gif
