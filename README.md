@@ -13,3 +13,8 @@ Screenshots
 [2]: ./assets/slidinglayerparty.gif
 [3]: ./assets/listviewpathexample.gif
 [4]: ./assets/viewpagerslidejoy.gif
+
+
+Seen on:
+
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-beauty--treatment--android--animations-green.svg?style=flat)](https://android-arsenal.com/details/3/2611)
