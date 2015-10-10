@@ -231,7 +231,9 @@ public class NoisySwipeRefreshLayout extends ViewGroup {
             mCurrPercentage = 0;
             return;
         }
-        mListener.onProgress(percent);
+        if (mListener != null) {
+            mListener.onProgress(percent);
+        }
         mCurrPercentage = percent;
     }
 
@@ -400,7 +402,9 @@ public class NoisySwipeRefreshLayout extends ViewGroup {
             removeCallbacks(mCancel);
             mReturnToStartPosition.run();
 
-            mListener.onCancel();
+            if (mListener != null) {
+                mListener.onCancel();
+            }
 
             if (mDownEvent != null) {
                 mDownEvent.recycle();
@@ -413,7 +417,10 @@ public class NoisySwipeRefreshLayout extends ViewGroup {
 
     private void startRefresh() {
         setRefreshing(true);
-        mListener.onRefresh();
+
+        if (mListener != null) {
+            mListener.onRefresh();
+        }
     }
 
     private void updateContentOffsetTop(int targetTop) {
