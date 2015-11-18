@@ -17,7 +17,7 @@
 package ugia.io.androidbeautytreatment.model;
 
 /**
- * Simple POJO to hold the information of a contact or friend
+ * Simple POJO holding the information of a contact or friend
  * <p/>
  * Created by joseluisugia on 26/09/15.
  */
@@ -28,12 +28,16 @@ public class Contact {
     private final String phoneNumber;
     private final boolean hasRecentConversation;
 
-    public Contact(int avatarResource, String name, String phoneNumber, boolean hasRecentConversation) {
+    public Contact(String name, String phoneNumber, boolean hasRecentConversation) {
+        this(name, phoneNumber, hasRecentConversation, 0);
+    }
 
-        this.avatarResource = avatarResource;
+    public Contact(String name, String phoneNumber, boolean hasRecentConversation, int avatarResource) {
+
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.hasRecentConversation = hasRecentConversation;
+        this.avatarResource = avatarResource;
     }
 
     public String getName() {

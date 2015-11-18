@@ -63,7 +63,7 @@ public class DynamicHeaderListFragment extends Fragment implements ClickableView
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        contacts = generateContacts();
+        contacts = Poets.generate();
         contactListAdapter = new HeaderContactListAdapter(contacts);
 
         initVectorDrawables();
@@ -124,25 +124,6 @@ public class DynamicHeaderListFragment extends Fragment implements ClickableView
         layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(contactListAdapter);
-    }
-
-    private Contact[] generateContacts() {
-
-        return new Contact[] {
-
-                new Contact(0, "Pio Baroja", "123", true),
-                new Contact(0, "Miguel Hernandez", "456", false),
-                new Contact(0, "Miguel de Cervantes", "789", false),
-                new Contact(0, "Juan Ramón Jimenez", "101", true),
-                new Contact(0, "Miguel de Unamuno", "112", true),
-                new Contact(0, "Antonio Machado", "175", false),
-                new Contact(0, "Federico García Lorca", "623", false),
-                new Contact(0, "Ramiro de Maeztu", "999", true),
-                new Contact(0, "Ramón María del Valle-Inclán", "747", false),
-                new Contact(0, "Ángel Ganivet", "622", false),
-                new Contact(0, "Enrique de Mesa", "278", true),
-                new Contact(0, "Azorín", "345", false)
-        };
     }
 
     private void updateViewsForHeaderSizeChanged(float progress) {
