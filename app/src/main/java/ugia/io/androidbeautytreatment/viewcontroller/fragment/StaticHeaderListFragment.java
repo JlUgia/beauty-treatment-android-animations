@@ -132,10 +132,9 @@ public class StaticHeaderListFragment extends Fragment implements ClickableViewC
 
         swipeRefreshImageViews = new ImageView[16];
         for (int i = 0; i < 16; i++) {
-            ImageView imageView = new ImageView(getActivity());
-            imageView.setLayoutParams(layoutParams);
-            swipeRefreshAnimationContainer.addView(imageView);
-            swipeRefreshImageViews[i] = imageView;
+            swipeRefreshImageViews[i] = new ImageView(getActivity());
+            swipeRefreshImageViews[i].setLayoutParams(layoutParams);
+            swipeRefreshAnimationContainer.addView(swipeRefreshImageViews[i]);
         }
 
         swipeRefreshLayout.setOnRefreshListener(refreshListener);
