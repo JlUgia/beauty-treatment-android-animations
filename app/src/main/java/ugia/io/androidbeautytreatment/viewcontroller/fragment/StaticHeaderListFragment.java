@@ -30,10 +30,20 @@ import android.widget.TextView;
 
 import ugia.io.androidbeautytreatment.R;
 import ugia.io.androidbeautytreatment.model.Contact;
+import ugia.io.androidbeautytreatment.util.Poets;
 import ugia.io.androidbeautytreatment.view.NoisySwipeRefreshLayout;
 import ugia.io.androidbeautytreatment.viewcontroller.adapter.ContactListAdapter;
 
 /**
+ * This fragment holds a list of elements using a @{RecyclerView}. A view at the top uses the first visible
+ * position of the list to show a brief detail of the element in question.
+ * This list also has a swipe-to-refresh type element attached to it. This is a modified version of
+ *
+ * @{SwipeRefreshLayout} that can be found on the Android Open Source Project, that exposes information about the
+ * current scrolling state on the Y axis. This allows for the parent view controller to interact with this value.
+ * In this specific case, a vector animation (that due to limitations on the current APIs is made out of other sub
+ * vector animations) builds and shows itself as the user swipes down the view.
+ * <p/>
  * Created by joseluisugia on 26/09/15.
  */
 public class StaticHeaderListFragment extends Fragment implements ClickableViewController {
@@ -225,6 +235,13 @@ public class StaticHeaderListFragment extends Fragment implements ClickableViewC
                     }
                 }
 
+                /**
+                 * Determines the current checkpoint of the pieced animation based on the progress of the swipe
+                 * and the cue points specified.
+                 *
+                 * @param progress
+                 * @return
+                 */
                 private int animationStateForProgress(float progress) {
 
                     int length = animationCuePoints.length;

@@ -40,7 +40,7 @@ import ugia.io.androidbeautytreatment.R;
 /**
  * The SwipeRefreshLayout should be used whenever the user can refresh the
  * contents of a view via a vertical swipe gesture. The activity that
- * instantiates this view should add an OnRefreshListener to be notified
+ * instantiates this view needs to add an OnRefreshListener in order to be notified
  * whenever the swipe to refresh gesture is completed. The SwipeRefreshLayout
  * will notify the listener each and every time the gesture is completed again;
  * the listener is responsible for correctly determining when to actually

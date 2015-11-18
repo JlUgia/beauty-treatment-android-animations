@@ -28,7 +28,7 @@ import ugia.io.androidbeautytreatment.model.Contact;
 
 /**
  * This base class holds a basic adapter that takes care of populating a list of contacts. This class may be
- * extended to add extra funcionality
+ * extended to add extra functionality
  * <p/>
  * Created by joseluisugia on 16/07/15.
  */

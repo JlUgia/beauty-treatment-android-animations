@@ -29,9 +29,23 @@ import android.widget.ImageView;
 
 import ugia.io.androidbeautytreatment.R;
 import ugia.io.androidbeautytreatment.model.Contact;
+import ugia.io.androidbeautytreatment.util.Poets;
 import ugia.io.androidbeautytreatment.viewcontroller.adapter.HeaderContactListAdapter;
 
 /**
+ * This fragment holds a list of elements using a @{RecyclerView}. At the top of the list there is a header that
+ * reacts based on scrolling events in two different ways:
+ * <p/>
+ * 1. The avatar repositions itself within the Y axis and it is scaled according to the scrolling boundaries
+ * defined.
+ * <p/>
+ * 2. An animation is triggered, causing the perceived effect of the diluting the stroke of the avatar into a
+ * line that is then used as a boundary to separate the header from the content. This is made out of three
+ * different animations. The first is a vector animation that acts on the animatable properties #trimPathStart
+ * and #trimPathEnd to collapse the stroke of the avatar image. This is followed by a scaling animation to a view
+ * containing a thin line. This view is initially invisible and drawn behind the user avatar. Finally, a reveal
+ * effect is triggered to fill the top bar.
+ * <p/>
  * Created by joseluisugia on 26/09/15.
  */
 public class DynamicHeaderListFragment extends Fragment implements ClickableViewController {
@@ -126,19 +140,26 @@ public class DynamicHeaderListFragment extends Fragment implements ClickableView
         recyclerView.setAdapter(contactListAdapter);
     }
 
+    /**
+     * This method is responsible for updating the views according to the new progress value extracted from
+     * scrolling events coming from our @{RecyclerView}
+     *
+     * @param progress
+     */
     private void updateViewsForHeaderSizeChanged(float progress) {
 
-        // Scale group
+        // Scale avatar group
         float scale = 1 - (progress * userAvatarResizeRatio);
         userAvatarContainer.setScaleY(scale);
         userAvatarContainer.setScaleX(scale);
 
+        // Translate views along Y axis
         float translationY = (float) (-listHeaderHeight * 0.5 * progress);
         userAvatarContainer.setTranslationY(translationY);
         topHeader.setTranslationY(translationY);
         topHeaderDividerLine.setTranslationY(translationY);
 
-        // Recalculate stroke
+        // Recalculate stroke transformation
         if (userAvatarStrokeVisible) {
             if (progress > 0.1) {
                 triggerAvatarStrokeTransformation(false);
@@ -165,9 +186,11 @@ public class DynamicHeaderListFragment extends Fragment implements ClickableView
 
     private void triggerAvatarStrokeTransformation(boolean appear) {
 
+        // Scale thin line behind avatar
         int lineScaleX = appear ? 1 : 10;
         topHeaderDividerLine.animate().scaleX(lineScaleX).setDuration(200);
 
+        // Animate avatar stroke vector path
         AnimatedVectorDrawable drawable = appear ? appearingImageStroke : disappearingImageStroke;
         imageStrokeVectorDrawable.setImageDrawable(drawable);
         drawable.start();

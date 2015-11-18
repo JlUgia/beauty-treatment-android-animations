@@ -26,6 +26,9 @@ import android.widget.TextView;
 import ugia.io.androidbeautytreatment.R;
 
 /**
+ * This fragment is used to populate the each of the pages of the view pager. Depending on the index, a different
+ * text and background color is assigned to it.
+ * <p/>
  * Created by joseluisugia on 22/09/15.
  */
 public class ViewPagerTextViewFragment extends TaggableFragment {

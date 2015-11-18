@@ -31,6 +31,11 @@ import ugia.io.androidbeautytreatment.R;
 import ugia.io.androidbeautytreatment.viewcontroller.adapter.ViewPagerAdapter;
 
 /**
+ * This fragment contains a @{ViewPager} that can be applied to example transformations:
+ *
+ * @{RotationalPageTransformer} or @{SlideJoyPageTransformer}. It also has an informative header with text views
+ * that are animated based on the current scroll state of the view pager.
+ * <p/>
  * Created by joseluisugia on 18/09/15.
  */
 public class ViewPagerFragment extends Fragment implements ClickableViewController {
@@ -102,7 +107,7 @@ public class ViewPagerFragment extends Fragment implements ClickableViewControll
 
         public void transformPage(View page, float position) {
 
-            transformTextViews(position, (int) page.getTag());
+            transformHeaderTextViews(position, (int) page.getTag());
 
             // Alpha
             float alpha = Transitions.intermediateValueForRange(position, alphaCuePoints, alphaValues);
@@ -136,7 +141,7 @@ public class ViewPagerFragment extends Fragment implements ClickableViewControll
         @Override
         public void transformPage(View page, float position) {
 
-            transformTextViews(position, (int) page.getTag());
+            transformHeaderTextViews(position, (int) page.getTag());
 
             // Scale
             float scaleValue = Transitions.intermediateValueForRange(position, scaleCuePoints, scaleValues);
@@ -157,7 +162,7 @@ public class ViewPagerFragment extends Fragment implements ClickableViewControll
         }
     }
 
-    private void transformTextViews(float progress, int currentPage) {
+    private void transformHeaderTextViews(float progress, int currentPage) {
 
         TextView textView = userDetailsTextViews[currentPage];
         float translationY;

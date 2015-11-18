@@ -19,6 +19,9 @@ package ugia.io.androidbeautytreatment.viewcontroller.fragment;
 import android.view.View;
 
 /**
+ * This interface enforces the fact that classes implementing it can accept click events on sub views contained
+ * within the view group.
+ * <p/>
  * Created by joseluisugia on 01/10/15.
  */
 public interface ClickableViewController {
