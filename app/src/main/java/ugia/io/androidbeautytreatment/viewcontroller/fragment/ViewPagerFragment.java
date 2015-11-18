@@ -25,7 +25,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.wunderlist.slidinglayer.SlidingLayer;
 import com.wunderlist.slidinglayer.utils.Transitions;
 import ugia.io.androidbeautytreatment.R;
 import ugia.io.androidbeautytreatment.viewcontroller.adapter.ViewPagerAdapter;
@@ -45,8 +44,6 @@ public class ViewPagerFragment extends Fragment implements ClickableViewControll
 
     private TextView[] userDetailsTextViews;
     private int viewPagerHeaderHeight;
-
-    private SlidingLayer slidingLayer;
 
     public static ViewPagerFragment newInstance() {
         return new ViewPagerFragment();
@@ -93,7 +90,6 @@ public class ViewPagerFragment extends Fragment implements ClickableViewControll
 
     @Override
     public void buttonClicked(View view) {
-        slidingLayer.openLayer(true);
     }
 
 
