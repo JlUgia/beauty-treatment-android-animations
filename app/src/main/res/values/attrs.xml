@@ -28,7 +28,6 @@
         <attr name="cornerRadius" format="dimension"/>
     </declare-styleable>
 
-
     <!-- SuperSwipeRefreshLayout -->
     <declare-styleable name="SuperSwipeRefreshLayout">
         <attr name="topOffset" format="dimension"/>

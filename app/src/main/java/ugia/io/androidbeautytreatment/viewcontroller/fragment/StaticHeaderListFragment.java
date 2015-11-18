@@ -119,6 +119,7 @@ public class StaticHeaderListFragment extends Fragment implements ClickableViewC
                 loadVectorDrawable(R.drawable.branch_minified_grow_leave9),
                 loadVectorDrawable(R.drawable.branch_minified_grow_source)
         };
+
         swipeRefreshImageViews = new ImageView[16];
         for (int i = 0; i < 16; i++) {
             ImageView imageView = new ImageView(getActivity());
@@ -167,6 +168,7 @@ public class StaticHeaderListFragment extends Fragment implements ClickableViewC
         }
 
         private void bindContact(Contact contact) {
+
             contactNameTextView.setText(contact.getName());
             contactNumberTextView.setText(contact.getPhoneNumber());
 
@@ -216,6 +218,7 @@ public class StaticHeaderListFragment extends Fragment implements ClickableViewC
                 }
 
                 private void resetAnimations() {
+
                     currentAnimationStageIndex = INVALID_INDEX;
                     for (ImageView imageView : swipeRefreshImageViews) {
                         imageView.setImageDrawable(null);

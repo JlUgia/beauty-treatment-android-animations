@@ -182,6 +182,7 @@ public class DynamicHeaderListFragment extends Fragment implements ClickableView
             super.onScrolled(recyclerView, dx, dy);
 
             View header = layoutManager.findViewByPosition(0);
+
             float currentTopOffset;
             if (header == null) {
                 currentTopOffset = listHeaderHeight;

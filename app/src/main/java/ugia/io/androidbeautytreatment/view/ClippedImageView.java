@@ -103,8 +103,8 @@ public class ClippedImageView extends ImageView {
         super.onDraw(canvas);
 
         if (strokePaint != null) {
-            canvas.drawCircle(width / 2, height / 2, (cornerRadius - strokePaint.getStrokeWidth() + 1) / 2,
-                    strokePaint);
+            canvas.drawCircle(width / 2, height / 2,
+                    (cornerRadius - strokePaint.getStrokeWidth() + 1) / 2, strokePaint);
         }
     }
 }

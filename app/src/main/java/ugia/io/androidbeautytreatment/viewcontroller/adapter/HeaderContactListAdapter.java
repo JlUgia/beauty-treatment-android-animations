@@ -45,6 +45,7 @@ public class HeaderContactListAdapter extends ContactAdapter {
         if (viewType == VIEW_TYPE_ROW) {
             View view = layoutInflater.inflate(R.layout.item_list, parent, false);
             return new ContactViewHolder(view);
+
         } else {
             return new HeaderViewHolder(createHeader(parent));
         }
