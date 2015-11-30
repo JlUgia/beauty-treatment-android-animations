@@ -19,6 +19,7 @@ package ugia.io.androidbeautytreatment.viewcontroller.adapter;
 import android.app.Fragment;
 import android.app.FragmentManager;
 
+import ugia.io.androidbeautytreatment.viewcontroller.fragment.TaggableFragment;
 import ugia.io.androidbeautytreatment.viewcontroller.fragment.ViewPagerTextViewFragment;
 
 /**
@@ -41,7 +42,10 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
 
         int color = backgroundColorResources[position];
-        return ViewPagerTextViewFragment.newInstance(position + 1, color);
+
+        TaggableFragment fragment = ViewPagerTextViewFragment.newInstance(position + 1, color);
+        fragment.setViewTag(position);
+        return fragment;
     }
 
     @Override

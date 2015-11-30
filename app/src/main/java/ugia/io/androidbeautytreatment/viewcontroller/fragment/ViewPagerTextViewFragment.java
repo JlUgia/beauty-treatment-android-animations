@@ -16,7 +16,6 @@
 
 package ugia.io.androidbeautytreatment.viewcontroller.fragment;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -32,7 +31,7 @@ import ugia.io.androidbeautytreatment.R;
  * <p/>
  * Created by joseluisugia on 22/09/15.
  */
-public class ViewPagerTextViewFragment extends Fragment {
+public class ViewPagerTextViewFragment extends TaggableFragment {
 
     private static final String PAGE_COLOR_RESOURCE = "pageColorResource";
     private static final String PAGE_INDEX_KEY = "pageIndex";
