@@ -63,7 +63,7 @@ public class ViewPagerFragment extends Fragment implements ClickableViewControll
         View view = inflater.inflate(R.layout.fragment_viewpager, container, false);
 
         viewPager = (ViewPager) view.findViewById(R.id.viewpager);
-        pagerAdapter = new ViewPagerAdapter(getFragmentManager());
+        pagerAdapter = new ViewPagerAdapter(getChildFragmentManager());
         viewPager.setAdapter(pagerAdapter);
         viewPager.setPageTransformer(true, new SlideJoyPageTransformer());
 
